@@ -2,6 +2,7 @@
 library(tidyverse)
 library(here)
 
+
 tv_hours_tabulation <-  
   gss_cat %>% 
   filter(age < 30) %>% 
@@ -9,3 +10,4 @@ tv_hours_tabulation <-
   summarise(mean_tv_hours = mean(tvhours, na.rm = TRUE))
 
 write_csv(tv_hours_tabulation, here("tv_hours_by_marital.csv"))
+
